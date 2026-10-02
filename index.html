@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhóm 10 - Web Engineering Portfolio | K24</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Three.js CDN for 3D animated background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+  <!-- Cinematic Intro Opening (Nhóm 10) -->
+  <div id="cinematic-intro" class="cinematic-intro" role="dialog" aria-label="Intro opening">
+    <div class="intro-backdrop"></div>
+    <div class="intro-content">
+      <div class="intro-badge">
+        <span class="status-pulse"></span> K24 • ĐH KHTN ĐHQG-HCM
+      </div>
+      <h1 class="intro-text">
+        Xin chào — <span class="intro-highlight">Nhóm 10</span> xin được phép giới thiệu
+      </h1>
+      <p class="intro-subtitle">Portfolio Đội Ngũ 3 Lập Trình Viên Web</p>
+      <div class="intro-loader">
+        <div class="intro-loader-bar"></div>
+      </div>
+      <button id="skip-intro-btn" class="intro-skip-btn">Bỏ qua <i class="fa-solid fa-forward"></i></button>
+    </div>
+  </div>
+
+  <!-- 3D Dynamic Animated Canvas Background -->
+  <canvas id="canvas-3d"></canvas>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-code-merge"></i></span>
+        <div class="logo-group">
+          <span class="logo-text">Nhóm 10<span class="highlight">Portfolio</span></span>
+          <span class="logo-sub">K24 • Web Engineering</span>
+        </div>
+      </a>
+
+      <div class="nav-tag">
+        <span class="status-pulse"></span>
+        <span>K24 • HCMUS</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-background-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge reveal-on-scroll">
+        <span class="status-pulse"></span>
+        <span>Hồ Sơ Năng Lực Nhóm 10 • ĐH KHTN ĐHQG-HCM</span>
+      </div>
+
+      <h1 class="hero-title reveal-on-scroll reveal-delay-1">
+        Portfolio Đội Ngũ <br>
+        <span class="gradient-text">3 Lập Trình Viên Web</span>
+      </h1>
+
+      <p class="hero-desc reveal-on-scroll reveal-delay-2">
+        Chào mừng đến với không gian Portfolio của nhóm chúng tôi. Sự kết hợp giữa tư duy 
+        <strong>Kiến trúc hệ thống</strong>, <strong>Thiết kế UI/UX tinh tế</strong> và 
+        <strong>Kỹ thuật Backend & QA chuẩn xác</strong>.
+      </p>
+
+      <!-- 3 Members Quick Spotlight in Hero -->
+      <div class="hero-members-spotlight reveal-on-scroll reveal-delay-2">
+        <div class="spotlight-title">Thành viên nòng cốt:</div>
+        <div class="spotlight-avatars">
+          <a href="#members" class="spotlight-item" title="Niê Ngọc Lâm - Trưởng nhóm">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Niê Ngọc Lâm">
+            <div class="spotlight-info">
+              <span class="spotlight-name">Niê Ngọc Lâm</span>
+              <span class="spotlight-role">Leader & Fullstack</span>
+            </div>
+          </a>
+          <a href="#members" class="spotlight-item" title="Nguyễn Lương Hoàng Duy - Frontend & UI/UX">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80" alt="Nguyễn Lương Hoàng Duy">
+            <div class="spotlight-info">
+              <span class="spotlight-name">Nguyễn L. H. Duy</span>
+              <span class="spotlight-role">Frontend & UI/UX</span>
+            </div>
+          </a>
+          <a href="#members" class="spotlight-item" title="Phan Nguyễn Tuấn Anh - Backend & QA">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Phan Nguyễn Tuấn Anh">
+            <div class="spotlight-info">
+              <span class="spotlight-name">Phan N. T. Anh</span>
+              <span class="spotlight-role">Backend & QA</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-cta reveal-on-scroll reveal-delay-3">
+        <a href="#members" class="btn btn-primary">
+          <i class="fa-solid fa-address-card"></i> Khám phá hồ sơ 3 thành viên
+        </a>
+        <a href="#projects" class="btn btn-secondary">
+          <i class="fa-solid fa-laptop-code"></i> Xem dự án tiêu biểu
+        </a>
+      </div>
+
+      <!-- Portfolio Key Metrics -->
+      <div class="stats-grid">
+        <div class="stat-card reveal-on-scroll reveal-delay-1">
+          <div class="stat-number">03</div>
+          <div class="stat-label">Thành viên K24</div>
+        </div>
+        <div class="stat-card reveal-on-scroll reveal-delay-2">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Chủ động & Cam kết</div>
+        </div>
+        <div class="stat-card reveal-on-scroll reveal-delay-3">
+          <div class="stat-number">03+</div>
+          <div class="stat-label">Dự án Web nổi bật</div>
+        </div>
+        <div class="stat-card reveal-on-scroll reveal-delay-4">
+          <div class="stat-number">A+</div>
+          <div class="stat-label">Tiêu chuẩn chất lượng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core 3 Members Section (Centerpiece of Portfolio) -->
+  <section id="members" class="section members-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="eyebrow"><i class="fa-solid fa-users-gear"></i> PROFILE CHI TIẾT</span>
+        <h2 class="section-title">Hồ Sơ Năng Lực 3 Thành Viên</h2>
+        <p class="section-subtitle">
+          Mỗi thành viên mang một thế mạnh chuyên môn đặc thù, tạo nên sức mạnh tổng hợp hoàn chỉnh cho toàn bộ quy trình phát triển web.
+        </p>
+      </div>
+
+      <!-- Quick Search & Role Filter -->
+      <div class="filter-controls reveal-on-scroll reveal-delay-1">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="search-input" placeholder="Tìm theo tên, MSSV (2412...), kỹ năng..." autocomplete="off">
+          <button id="clear-search" class="clear-btn" title="Xóa tìm kiếm"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="role-filters" id="role-filters">
+          <button class="filter-btn active" data-filter="all">Tất cả 3 thành viên</button>
+          <button class="filter-btn" data-filter="leader">Trưởng nhóm</button>
+          <button class="filter-btn" data-filter="frontend">Frontend & UI/UX</button>
+          <button class="filter-btn" data-filter="backend">Backend & QA</button>
+        </div>
+      </div>
+
+      <!-- Members Grid (Focus on 3 Members with Elevated Presentation) -->
+      <div class="members-grid portfolio-grid" id="members-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Empty State (if search doesn't match) -->
+      <div class="empty-state hidden" id="empty-state">
+        <i class="fa-regular fa-face-frown empty-icon"></i>
+        <h3>Không tìm thấy thành viên phù hợp</h3>
+        <p>Thử tìm với từ khóa khác (ví dụ: Lâm, Duy, Tuấn Anh, React, UI/UX, MSSV...)</p>
+        <button class="btn btn-secondary btn-sm" id="reset-filter-btn">Hiển thị lại 3 thành viên</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="eyebrow"><i class="fa-solid fa-cubes"></i> SHOWCASE DỰ ÁN</span>
+        <h2 class="section-title">Dự Án Nhóm Tiêu Biểu</h2>
+        <p class="section-subtitle">
+          Những sản phẩm thực tế chứng minh sự phối hợp ăn ý và năng lực lập trình của 3 thành viên.
+        </p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Workflow / Pipeline Section -->
+  <section id="workflow" class="section workflow-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> MÔ HÌNH PHỐI HỢP</span>
+        <h2 class="section-title">Quy Trình Phát Triển Của Nhóm</h2>
+        <p class="section-subtitle">
+          Chu trình khép kín đảm bảo dự án web từ khâu ý tưởng đến khi vận hành đạt chuẩn mực cao nhất.
+        </p>
+      </div>
+
+      <div class="workflow-steps">
+        <div class="workflow-step-card reveal-on-scroll reveal-delay-1">
+          <div class="step-badge">Giai đoạn 01</div>
+          <div class="step-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <div class="step-person"><i class="fa-solid fa-user-check"></i> Hoàng Duy</div>
+          <h3>UI/UX & Trải Nghiệm</h3>
+          <p>Nghiên cứu yêu cầu, thiết kế wireframe, tương tác prototype trên Figma và xây dựng Design System đồng bộ.</p>
+        </div>
+
+        <div class="workflow-step-arrow reveal-on-scroll reveal-delay-2"><i class="fa-solid fa-arrow-right-long"></i></div>
+
+        <div class="workflow-step-card highlight-step reveal-on-scroll reveal-delay-2">
+          <div class="step-badge">Giai đoạn 02</div>
+          <div class="step-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="step-person"><i class="fa-solid fa-user-check"></i> Ngọc Lâm (Lead)</div>
+          <h3>Kiến Trúc & Mã Nguồn</h3>
+          <p>Thiết lập kiến trúc thư mục, quản trị Git, phân chia module và hiện thực hóa logic Frontend & API.</p>
+        </div>
+
+        <div class="workflow-step-arrow reveal-on-scroll reveal-delay-3"><i class="fa-solid fa-arrow-right-long"></i></div>
+
+        <div class="workflow-step-card reveal-on-scroll reveal-delay-3">
+          <div class="step-badge">Giai đoạn 03</div>
+          <div class="step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="step-person"><i class="fa-solid fa-user-check"></i> Tuấn Anh</div>
+          <h3>Dữ Liệu, QA & Kiểm Thử</h3>
+          <p>Tối ưu hóa truy vấn dữ liệu, viết kịch bản kiểm thử (Test Cases), rà soát lỗi trên đa trình duyệt và tài liệu hóa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Collaboration Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-box reveal-on-scroll">
+        <div class="contact-text">
+          <span class="eyebrow">KẾT NỐI VỚI CHÚNG TÔI</span>
+          <h2>Bạn Có Dự Án Hoặc Muốn Hợp Tác?</h2>
+          <p>
+            Nhóm 3 thành viên K24 luôn sẵn sàng lắng nghe ý kiến phản hồi, trao đổi kinh nghiệm lập trình và tham gia các đồ án học thuật.
+          </p>
+        </div>
+
+        <div class="contact-members-cards">
+          <div class="contact-mini-card reveal-on-scroll reveal-delay-1">
+            <span class="contact-name">Niê Ngọc Lâm</span>
+            <span class="contact-mssv">MSSV: 24127436</span>
+            <a href="mailto:24127436@student.hcmus.edu.vn" class="contact-email-btn">
+              <i class="fa-solid fa-envelope"></i> Gửi email cho Lâm
+            </a>
+          </div>
+
+          <div class="contact-mini-card reveal-on-scroll reveal-delay-2">
+            <span class="contact-name">Nguyễn Lương Hoàng Duy</span>
+            <span class="contact-mssv">MSSV: 24127352</span>
+            <a href="mailto:24127352@student.hcmus.edu.vn" class="contact-email-btn">
+              <i class="fa-solid fa-envelope"></i> Gửi email cho Duy
+            </a>
+          </div>
+
+          <div class="contact-mini-card reveal-on-scroll reveal-delay-3">
+            <span class="contact-name">Phan Nguyễn Tuấn Anh</span>
+            <span class="contact-mssv">MSSV: 24127321</span>
+            <a href="mailto:24127321@student.hcmus.edu.vn" class="contact-email-btn">
+              <i class="fa-solid fa-envelope"></i> Gửi email cho Tuấn Anh
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content reveal-on-scroll">
+      <div class="footer-left">
+        <div class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-code-merge"></i></span>
+          <div class="logo-group">
+            <span class="logo-text">Nhóm 10<span class="highlight">Portfolio</span></span>
+            <span class="logo-sub">K24 Web Engineering Team</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Trang Portfolio chính thức của Nhóm 10 (24127436 - 24127352 - 24127321).
+          Khoa Công Nghệ Thông Tin - Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM.
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="mailto:contact@nhom10.example.com" class="social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2026 Nhóm 10 Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Chi Tiết Hồ Sơ Cá Nhân -->
+  <div class="modal-overlay" id="member-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" title="Đóng (Esc)" aria-label="Đóng cửa sổ chi tiết">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-content-wrapper" id="modal-content">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="background3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
