@@ -9,27 +9,27 @@ const membersData = [
   {
     id: 1,
     name: "Niê Ngọc Lâm",
-    category: "leader",
-    role: "Trưởng nhóm • Fullstack Developer",
+    category: ["frontend", "backend", "fullstack"],
+    role: "Fullstack Developer • Kiến trúc hệ thống",
     studentId: "24127436",
     email: "24127436@student.hcmus.edu.vn",
     phone: "0912 345 678",
-    status: "Sẵn sàng nhận dự án",
+    status: "Đang tích cực phát triển đồ án",
     avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
-    shortBio: "Định hướng kiến trúc hệ thống, điều phối dự án và phát triển các module cốt lõi.",
+    shortBio: "Định hướng kiến trúc kỹ thuật hệ thống, phát triển các module Fullstack cốt lõi.",
     careerGoal: "Trở thành Chuyên gia Giải pháp Phần mềm (Software Solution Architect) chuyên sâu về Web & Cloud Services.",
-    fullBio: "Sinh viên Khóa 2024 Khoa Công nghệ Thông tin - Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM. Có đam mê mãnh liệt với công nghệ web hiện đại, xây dựng kiến trúc ứng dụng bền vững và quản trị dự án phần mềm theo chuẩn Agile/Scrum. Trong nhóm, Lâm giữ vai trò kết nối các thành viên, phân bổ tài nguyên và định hướng kỹ thuật cho toàn bộ sản phẩm.",
+    fullBio: "Sinh viên Khóa 2024 Khoa Công nghệ Thông tin - Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM. Có đam mê mãnh liệt với công nghệ web hiện đại, xây dựng kiến trúc ứng dụng bền vững và quản trị mã nguồn. Trong nhóm, Lâm giữ vai trò trụ cột kỹ thuật, thiết kế cấu trúc hệ thống và hỗ trợ các thành viên giải quyết bài toán kỹ thuật phức tạp.",
     skills: [
-      { name: "React / Next.js", level: 90 },
-      { name: "Node.js & Express API", level: 86 },
-      { name: "Kiến trúc hệ thống & Git Flow", level: 88 },
-      { name: "Quản lý dự án & Team Leadership", level: 92 }
+      { name: "React / Next.js", level: 92 },
+      { name: "Node.js & Express API", level: 88 },
+      { name: "Kiến trúc hệ thống & Git Flow", level: 90 },
+      { name: "Tối ưu hóa hiệu năng & Security", level: 86 }
     ],
     tasks: [
-      "Lập kế hoạch phân bổ công việc, theo dõi tiến độ tổng thể của cả nhóm.",
       "Thiết kế cấu trúc mã nguồn và kiến trúc tổng thể của sản phẩm.",
-      "Tích hợp và kết nối các thành phần Frontend với logic ứng dụng.",
-      "Review code và hỗ trợ các thành viên giải quyết các vấn đề kỹ thuật."
+      "Tích hợp và kết nối các thành phần Frontend với logic ứng dụng và API.",
+      "Review code và hỗ trợ các thành viên giải quyết các vấn đề kỹ thuật.",
+      "Triển khai máy chủ, cấu hình môi trường và tối ưu tốc độ tải trang."
     ],
     socials: {
       github: "https://github.com",
@@ -40,27 +40,27 @@ const membersData = [
   {
     id: 2,
     name: "Nguyễn Lương Hoàng Duy",
-    category: "frontend",
-    role: "Frontend Developer • UI/UX Designer",
+    category: ["leader", "frontend"],
+    role: "Trưởng nhóm • Frontend & UI/UX Specialist",
     studentId: "24127352",
     email: "24127352@student.hcmus.edu.vn",
     phone: "0934 567 890",
-    status: "Đang mở cơ hội hợp tác",
+    status: "Sẵn sàng nhận dự án",
     avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=400&q=80",
-    shortBio: "Phụ trách thiết kế trải nghiệm người dùng, tối ưu giao diện web và hiệu ứng tương tác.",
-    careerGoal: "Trở thành Senior Product Designer & Frontend Specialist chuyên tạo ra những sản phẩm số chuẩn mực quốc tế.",
-    fullBio: "Sinh viên Khóa 2024 Khoa Công nghệ Thông tin - Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM. Đam mê thiết kế đồ họa tương tác và phát triển giao diện người dùng. Luôn chú trọng đến tính thẩm mỹ hiện đại, khả năng tương thích mọi kích thước màn hình (Responsive) và độ mượt mà của website.",
+    shortBio: "Trưởng nhóm, phụ trách điều phối tiến độ, thiết kế trải nghiệm người dùng và phát triển giao diện web.",
+    careerGoal: "Trở thành Tech Lead / Senior Product Designer chuyên tạo ra những sản phẩm số chuẩn mực quốc tế.",
+    fullBio: "Sinh viên Khóa 2024 Khoa Công nghệ Thông tin - Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM. Đảm nhận vai trò Trưởng nhóm (Leader) điều phối tổng thể tiến độ và phân chia công việc. Đồng thời là chuyên gia về thiết kế đồ họa tương tác và phát triển giao diện người dùng, Duy luôn chú trọng đến tính thẩm mỹ hiện đại, tinh thần gắn kết nhóm và trải nghiệm mượt mà của website.",
     skills: [
-      { name: "HTML5 / CSS3 / SCSS Modern", level: 94 },
-      { name: "JavaScript (ES6+) & DOM Engine", level: 88 },
+      { name: "Quản lý dự án & Team Leadership", level: 94 },
+      { name: "HTML5 / CSS3 / SCSS Modern", level: 92 },
       { name: "Figma UI/UX & Design Systems", level: 90 },
-      { name: "Responsive & Micro-interactions", level: 92 }
+      { name: "JavaScript (ES6+) & Responsive", level: 88 }
     ],
     tasks: [
+      "Lập kế hoạch phân bổ công việc, theo dõi tiến độ tổng thể và kết nối các thành viên trong nhóm.",
       "Xây dựng wireframe, mockup và Design System giao diện trực quan trên Figma.",
       "Hiện thực hóa giao diện website chuẩn Responsive trên Mobile, Tablet và Desktop.",
-      "Tối ưu hóa màu sắc, bố cục, typography và trải nghiệm tương tác người dùng.",
-      "Xây dựng các hiệu ứng chuyển động và tương tác mượt mà trong trang web."
+      "Tổ chức họp nhóm định kỳ, nghiệm thu chất lượng các module trước khi hoàn thiện."
     ],
     socials: {
       github: "https://github.com",
@@ -111,8 +111,8 @@ const projectsData = [
     description: "Nền tảng trực tuyến hỗ trợ sinh viên quản lý lịch học, tra cứu tài liệu môn học và phối hợp nhóm thông minh.",
     tech: ["JavaScript", "HTML5", "CSS3", "REST API", "LocalStorage"],
     contributions: [
+      { member: "Hoàng Duy (Lead)", role: "Điều phối dự án & Thiết kế Figma Responsive" },
       { member: "Ngọc Lâm", role: "Kiến trúc hệ thống & Quản lý state" },
-      { member: "Hoàng Duy", role: "Thiết kế Figma & Giao diện Responsive" },
       { member: "Tuấn Anh", role: "Xử lý dữ liệu & Viết kịch bản kiểm thử" }
     ]
   },
@@ -124,8 +124,8 @@ const projectsData = [
     description: "Ứng dụng quản trị tác vụ theo mô hình Agile/Kanban với khả năng phân loại thẻ việc và lưu trữ thời gian thực.",
     tech: ["JavaScript ES6+", "Drag & Drop API", "CSS Grid", "Dark Theme"],
     contributions: [
+      { member: "Hoàng Duy (Lead)", role: "Quản lý tiến độ & Giao diện tối/sáng" },
       { member: "Ngọc Lâm", role: "Điều phối logic kéo thả (Drag & Drop)" },
-      { member: "Hoàng Duy", role: "Hiệu ứng chuyển động & Giao diện tối/sáng" },
       { member: "Tuấn Anh", role: "Bộ nhớ lưu trữ IndexedDB & Bắt lỗi" }
     ]
   },
@@ -137,7 +137,7 @@ const projectsData = [
     description: "Trang thương mại điện tử giới thiệu sản phẩm công nghệ xanh với bộ lọc tương tác nhanh và giỏ hàng mini.",
     tech: ["HTML5", "Modern CSS", "JavaScript", "Filter Engine"],
     contributions: [
-      { member: "Hoàng Duy", role: "Định hình thương hiệu & Thiết kế UI" },
+      { member: "Hoàng Duy (Lead)", role: "Định hình thương hiệu & Thiết kế UI" },
       { member: "Ngọc Lâm", role: "Xây dựng logic giỏ hàng & Tính toán" },
       { member: "Tuấn Anh", role: "Kiểm thử đa nền tảng (Cross-browser QA)" }
     ]
@@ -257,7 +257,10 @@ function renderMembers() {
 
   const filtered = membersData.filter((member) => {
     const matchesCategory =
-      currentCategory === "all" || member.category === currentCategory;
+      currentCategory === "all" ||
+      (Array.isArray(member.category)
+        ? member.category.includes(currentCategory)
+        : member.category === currentCategory);
 
     const term = currentSearchTerm.toLowerCase().trim();
     const matchesSearch =
